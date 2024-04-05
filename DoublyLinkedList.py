@@ -9,6 +9,7 @@ class LinkedList(object):
         self.size = 0 # node의 개수
         self.head = None
         self.tail = None
+        
     def insert_back(self, value):
         new_node = Node(value)
         if self.head is None:
@@ -20,6 +21,7 @@ class LinkedList(object):
     
             self.tail = self.tail.next
         self.size+=1
+        
     def remove_back(self): # => 이걸 구현 하려면 doubly linked list 여야 한다.
         self.tail = self.tail.prev
         self.tail.next = None
@@ -32,6 +34,7 @@ class LinkedList(object):
         for _ in range(idx):
             current = current.next
         return current.value
+    
     def insert(self, idx, value):
         new_node = Node(value)
         if idx == 0:
@@ -43,7 +46,8 @@ class LinkedList(object):
             for _ in range(idx-1):
                 current = current.next
             new_node.next = current.next
-            current.next = new_node     
+            current.next = new_node  
+               
     def remove(self, idx):
         if idx == 0:
             self.head = self.head.next # garbage collector가 알아서 처리해준다.
