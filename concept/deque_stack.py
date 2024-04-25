@@ -11,6 +11,7 @@ queue.popleft()
 queue.popleft()
 queue.popleft()
 
+
 stack=[]
 #push O(1)
 stack.append(1)
