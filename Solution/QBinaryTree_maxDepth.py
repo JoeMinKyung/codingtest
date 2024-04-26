@@ -55,5 +55,4 @@ def array2tree(arr):
 
 root=array2tree([3,9,20,None,None,15,7])
 
-
 print(maxDepth(root))
