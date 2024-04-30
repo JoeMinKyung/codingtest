@@ -57,7 +57,6 @@ class LinkedList(object):
                 print("->", end="")
         print()
 
-
 ll = LinkedList()
 ll.insert_back(1)
 ll.insert_back(2)
