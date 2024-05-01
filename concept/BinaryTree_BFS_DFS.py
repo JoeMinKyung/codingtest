@@ -24,6 +24,7 @@ def bfs(root):
             if cur_node.right:
                 q.append(cur_node.right)
         return visited
+    
 def preorder(cur_node):
     if cur_node is None:
         return
