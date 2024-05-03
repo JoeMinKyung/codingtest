@@ -2,7 +2,6 @@ from collections import deque
 
 def numIslands(grid):
     number_of_islands = 0
-    
     m = len(grid)
     n = len(grid[0])
     visited = [[False] * n for _ in range(m)]
