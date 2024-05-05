@@ -15,6 +15,7 @@ def shortestPathBinaryMatrix(grid):
         for i in range(8):
             next_r = cur_r + dr[i]
             next_c = cur_c + dc[i]
+
 grid=[
     [0,0,0,1,0,0,0],
     [0,1,1,1,0,1,0],
