@@ -15,6 +15,7 @@ def maxDepth(root):
         
         if cur_node.left:
             q.append((cur_node.left, cur_depth+1))
+        
         if cur_node.right:
             q.append((cur_node.right, cur_depth+1))  
     
