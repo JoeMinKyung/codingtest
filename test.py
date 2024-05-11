@@ -11,6 +11,7 @@ def shortestPathBinaryMatrix(grid):
     visited[0][0]=True
     
     while queue:
+        
         cur_r, cur_c = queue.popleft()
         for i in range(8):
             next_r = cur_r + dr[i]
