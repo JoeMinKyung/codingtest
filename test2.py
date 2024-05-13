@@ -31,6 +31,7 @@ def numIslands(grid):
     for i in range(row):
         
         for j in range(col):
+            
             if grid[i][j]=="1" and not visited[i][j]:
                 bfs(i,j)
                 num_of_islands+=1
