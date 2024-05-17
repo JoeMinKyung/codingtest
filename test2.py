@@ -35,6 +35,7 @@ def numIslands(grid):
             if grid[i][j]=="1" and not visited[i][j]:
                 bfs(i,j)
                 num_of_islands+=1
+    
     return num_of_islands
 grid1=[
     ['1','1','1','1','0'],
