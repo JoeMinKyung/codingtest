@@ -1,0 +1,9 @@
+def solution(n, arr1, arr2):
+    answer = []
+
+    for i in range(n):
+        combined = arr1[i] | arr2[i]
+        binary_string = format(combined, "0{}b".format(n))
+        decoded_line = binary_string.replace("1", "#").replace("0", " ")
+        answer.append(decoded_line)
+    return answer
