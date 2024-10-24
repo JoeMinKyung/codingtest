@@ -1,0 +1,36 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'plusMinus' function below.
+#
+# The function accepts INTEGER_ARRAY arr as parameter.
+#
+
+
+def plusMinus(arr):
+    res = [0] * 3
+    m = len(arr)
+    for i in arr:
+        if i > 0:
+            res[0] += 1
+        elif i < 0:
+            res[1] += 1
+        elif i == 0:
+            res[2] += 1
+    print(res)
+    for i in res:
+        print(i / m)
+        return i / m
+
+
+n = int(input().strip())
+
+arr = list(map(int, input().rstrip().split()))
+
+plusMinus(arr)
