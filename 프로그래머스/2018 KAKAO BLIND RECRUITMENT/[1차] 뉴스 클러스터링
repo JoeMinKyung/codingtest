@@ -1,0 +1,30 @@
+from collections import Counter
+
+
+def solution(str1, str2):
+    answer = 0
+
+    str1 = str1.lower()
+    str2 = str2.lower()
+
+    def create_multiset(s):
+        pairs = []
+        for i in range(len(s) - 1):
+            pair = s[i : i + 2]
+            if pair.isalpha():
+                pairs.append(pair)
+        return Counter(pairs)
+
+    multiset1 = create_multiset(str1)
+    multiset2 = create_multiset(str2)
+
+    intersection = multiset1 & multiset2
+    union = multiset1 | multiset2
+
+    if not union:
+        answer = 1
+    else:
+        answer = sum(intersection.values()) / sum(union.values())
+
+    answer = int(answer * 65536)
+    return answer
